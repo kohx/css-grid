@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css grid system</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/std-grid.css" rel="stylesheet" type="text/css"/>
+        <link href="css/std-grid-mq.css" rel="stylesheet" type="text/css"/>
+
+        <style>
+            html {
+                font-size: 62.5%;
+            }
+            body {
+                font-size: 1.2rem;
+                padding: 0;
+                margin: 0;
+            }
+            .wrapper {
+                margin: 0 auto;
+                min-width: 20vw;
+                padding: 1rem;
+            }
+            h2 {
+                padding: 2rem 1rem 0;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+            }
+            h3 {
+                padding: 2rem 1rem 2rem;
+            }
+            pre {
+                font-family: inherit;
+            }
+            code {
+                border: 1px solid rgba(0,0,0,0.2);
+                background-color: rgba(0,0,0,0.04);
+                border-radius: 2px;
+                padding: 0.4rem;
+                font-size: 1.4rem;
+                display: block;
+                line-height: 1.4;
+            }
+            [class*="grid"] {
+                border: 1px solid rgba(0,0,0,0.1);
+                padding: 0.2rem;
+                position: relative;
+            }
+            [class*="grid"] > span {
+                position: absolute;
+                right: -1px;;
+                bottom: calc(100% + 1px);
+                background: rgba(0,0,0,0.1);
+                padding: 0 0.4rem;
+                border-radius: 3px 3px 0 0;
+            }
+            [class*="grid"] > div
+            {
+                border-radius: 3px;
+                padding: 1rem;
+                border: 1px solid #bae1ff;
+                box-shadow: inset 0px 0px 10px #bae1ff;
+            }
+
+            @media (max-width: 992px) {
+                [class*="mgrid"] > div,
+                [class*="mgap"] > div,
+                div[class*="mcol"],
+                div[class*="mrow"],
+                div[class*="mgap"]
+                {
+                    border-color: #fac174;
+                    box-shadow: inset 0px 0px 10px #fac174;
+                }
+            }
+
+            @media (max-width: 768px) {
+                [class*="sgrid"] > div,
+                [class*="sgap"] > div,
+                div[class*="scol"],
+                div[class*="srow"],
+                div[class*="sgap"]
+                {
+                    border-color: #ffb3ba;
+                    box-shadow: inset 0px 0px 10px #ffb3ba;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+            <h1>std grid</h1>
+            <p>css grid systam made with css grid layout</p>
+
+            <h2>Usage</h2>
+
+            <p>Load "std-grid.css" CSS</p>
+
+            <code>&lt;link href="css/std-grid.css" rel="stylesheet" type="text/css"/&gt;</code>
+
+            <section>
+                <h2>"grid" and "col"</h2>
+                <p>Specify grid (grid1 to grid12) on the outside.</p>
+                <p>And put col (col1 to col12) in this.</p>
+
+                <section>
+                    <h3>Example - "grid12"</h3>
+
+                    <div class="grid12"><span>grid1</span>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+
+                        <div class="col2">col2</div>
+                        <div class="col2">col2</div>
+                        <div class="col2">col2</div>
+                        <div class="col2">col2</div>
+                        <div class="col2">col2</div>
+                        <div class="col2">col2</div>
+
+                        <div class="col3">col3</div>
+                        <div class="col3">col3</div>
+                        <div class="col3">col3</div>
+                        <div class="col3">col3</div>
+
+                        <div class="col4">col4</div>
+                        <div class="col4">col4</div>
+                        <div class="col4">col4</div>
+
+                        <div class="col6">col6</div>
+                        <div class="col6">col6</div>
+
+                        <div class="col7">col7</div>
+                        <div class="col5">col5</div>
+
+                        <div class="col8">col8</div>
+                        <div class="col4">col4</div>
+
+                        <div class="col9">col9</div>
+                        <div class="col3">col3</div>
+
+                        <div class="col10">col10</div>
+                        <div class="col2">col2</div>
+
+                        <div class="col10">col11</div>
+                        <div class="col2">col1</div>
+
+                        <div class="col12">col12</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Example - "grid6"</h3>
+                    <div class="grid6"><span>grid6</span>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+
+                        <div class="col2">col2</div>
+                        <div class="col2">col2</div>
+                        <div class="col2">col2</div>
+
+                        <div class="col3">col3</div>
+                        <div class="col3">col3</div>
+
+                        <div class="col4">col4</div>
+                        <div class="col2">col2</div>
+
+                        <div class="col6">col6</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Example - "grid3"</h3>
+                    <div class="grid3"><span>grid3</span>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+
+                        <div class="col2">col2</div>
+                        <div class="col1">col1</div>
+
+                        <div class="col1">col1</div>
+                        <div class="col2">col2S</div>
+
+                        <div class="col3">col3</div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h2>use "row"</h2>
+                <p>Specify the height in row (row1 to row6).</p>
+                <p>The basic height is specified by ":root" of "std-grid.css"</p>
+                <pre><code>:root {
+    --grid-height: 4rem;
+}</code></pre>
+
+                <section>
+                    <h3>Example - "row" and "col"</h3>
+                    <div class="grid3"><span>grid3</span>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+
+                        <div class="col1 row2">col1 row2</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+
+                        <div class="col1 row3">col1 row3</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+                        <div class="col1 row1">col1 row1</div>
+
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Example - "row" and "col"</h3>
+                    <div class="grid3"><span>grid3</span>
+                        <div class="row1 col3">row1 col3</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row2 col1">row2 col1</div>
+                        <div class="row3 col1">row3 col1</div>
+                        <div class="row2 col1">row2 col1</div>
+                        <div class="row1 col2">row1 col3</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row1 col1">row2 col1</div>
+                        <div class="row3 col1">row3 col1</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row2 col2">row2 col2</div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h2>use "gap"</h2>
+                <p>Specify the height in gap1 (gap1 to gap3)</p>
+                <p>The basic height is specified by ":root" of "std-grid.css"</p>
+                <pre><code>:root {
+    --grid-gap: 1rem;
+}</code></pre>
+
+                <section>
+                    <h3>Example - "gap1"</h3>
+                    <div class="grid3 gap1"><span>grid3 gap1</span>
+                        <div class="row1 col3">row1 col3</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row2 col1">row2 col1</div>
+                        <div class="row3 col1">row3 col1</div>
+                        <div class="row2 col1">row2 col1</div>
+                        <div class="row1 col2">row1 col3</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row1 col1">row2 col1</div>
+                        <div class="row3 col1">row3 col1</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row2 col2">row2 col2</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Example - "gap3"</h3>
+                    <div class="grid3 gap3"><span>grid3 gap3</span>
+                        <div class="row1 col3">row1 col3</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row2 col1">row2 col1</div>
+                        <div class="row3 col1">row3 col1</div>
+                        <div class="row2 col1">row2 col1</div>
+                        <div class="row1 col2">row1 col3</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row1 col1">row2 col1</div>
+                        <div class="row3 col1">row3 col1</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row1 col1">row1 col1</div>
+                        <div class="row2 col2">row2 col2</div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h2>Use media queries</h2>
+
+                <p>Load "std-grid-mq.css" CSS</p>
+                <code>&lt;link href="css/std-grid-mq.css" rel="stylesheet" type="text/css"/&gt;</code>
+
+                <section>
+                    <h3>Example - "grid", "mgrid" and "sgrid"</h3>
+
+                    <div class="grid3 mgrid2 sgrid1"><span>grid3 mgrid2 sgrid1</span>
+                        <div class="col1 row3 mrow2 srow1">col1 row3 mrow2 srow1</div>
+                        <div class="col1 row3 mrow2 srow1">col1 row3 mrow2 srow1</div>
+                        <div class="col1 row3 mrow2 srow1">col1 row3 mrow2 srow1</div>
+                        <div class="col1 row3 mrow2 srow1">col1 row3 mrow2 srow1</div>
+                        <div class="col1 row3 mrow2 srow1">col1 row3 mrow2 srow1</div>
+                        <div class="col1 row3 mrow2 srow1">col1 row3 mrow2 srow1</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Example - "col", "mcol" and "scol"</h3>
+
+                    <div class="grid3"><span>grid3</span>
+                        <div class="col1 mcol2 scol3 row3 mrow2 srow1">col1 mcol2 scol3 row3 mrow2 srow1</div>
+                        <div class="col1 scol3 row3 mrow2 srow1">col1 scol3 row3 mrow2 srow1</div>
+                        <div class="col1 scol3 row3 mrow2 srow1">col1 scol3 row3 mrow2 srow1</div>
+                        <div class="col1 mcol2 scol3 row3 mrow2 srow1">col1 mcol2 scol3 row3 mrow2 srow1</div>
+                        <div class="col1 mcol2 scol3 row3 mrow2 srow1">col1 mcol2 scol3 row3 mrow2 srow1</div>
+                        <div class="col1 scol3 row3 mrow2 srow1">col1 scol3 row3 mrow2 srow1</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Example - "row", "mrow" and "srow"</h3>
+
+                    <div class="grid1"><span>grid1</span>
+                        <div class="col1 row3 mrow1 srow1">col1 row3 mrow1 srow1</div>
+                        <div class="col1 row1 mrow3 srow1">col1 row1 mrow3 srow1</div>
+                        <div class="col1 row1 mrow1 srow3">col1 row1 mrow1 srow3</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Example - "gap", "mgap" and "sgap"</h3>
+
+                    <div class="grid3 gap1 mgap2 sgap0"><span>grid3 gap1 mgap2 sgap0</span>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                        <div class="col1">col1</div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h2>nest</h2>
+
+                <section>
+                    <h3>Example</h3>
+
+                    <!--1st-->
+                    <div class="grid3 gap2">
+                        <span>grid3 gap2</span>
+                        <div class="col1">col1</div>
+                        <div class="col2">col2
+
+                            <!--2nd-->
+                            <div class="grid3 gap1">
+                                <span>grid3 gap1</span>
+                                <div class="row1 col3">row1 col3</div>
+                                <div class="row1 col1">row1 col1</div>
+                                <div class="row2 col1">row2 col1</div>
+                                <div class="row3 col1">row3 col1</div>
+                                <div class="row2 col1">row2 col1</div>
+                                <div class="row1 col2">row1 col3</div>
+                                <div class="row1 col1">row1 col1</div>
+                                <div class="row1 col1">row2 col1</div>
+                                <div class="row3 col1">row3 col1</div>
+                                <div class="row1 col1">row1 col1</div>
+                                <div class="row1 col1">row1 col1</div>
+                                <div class="row2 col2">row2 col2</div>
+                            </div>
+                            <!--/2nd-->
+
+                        </div>
+                    </div>
+                    <!--/1st-->
+                </section>
+            </section>
+
+            <section>
+                <h2>Use All</h2>
+
+                <section>
+                    <h3>Example</h3>
+
+                    <!--1st-->
+                    <div class="grid3 mgrid1 gap2 mgap3"><span>grid3 mgrid1 gap2 mgap3</span>
+                        <div class="col1">col1</div>
+
+                        <div class="col2 mcol1"><span>col2 mcol1</span>
+
+                            <!--2nd-->
+                            <div class="grid3 mgrid2 sgrid1 gap1 mgap2 sgap3">
+                                <span>grid3 mgrid2 sgrid1 gap1 mgap2 sgap3</span>
+                                <div class="row1 col3 mcol2 scol1">row1 col3</div>
+                                <div class="row1 col1">row1 col1</div>
+                                <div class="row2 col1">row2 col1</div>
+                                <div class="row3 col1">row3 col1</div>
+                                <div class="row2 col1">row2 col1</div>
+                                <div class="row1 col2 mcol2 scol1">row1 col3</div>
+                                <div class="row1 col1">row1 col1</div>
+                                <div class="row1 col1">row2 col1</div>
+                                <div class="row3 col1">row3 col1</div>
+                                <div class="row1 col1">row1 col1</div>
+                                <div class="row1 col1">row1 col1</div>
+                                <div class="row2 col2 scol1">row2 col2</div>
+                            </div>
+                            <!--/2nd-->
+
+                        </div>
+                    </div>
+                    <!--/1st-->
+                </section>
+            </section>
+
+            <section>
+                <h2>Other</h2>
+
+                <section>
+                    <h3>Example</h3>
+
+                    <div class="grid3">
+                        <span>grid3</span>
+                        <div class="row2 lef top">row2 lef top</div>
+                        <div class="row2 cen top">row2 cen top</div>
+                        <div class="row2 rig top">row2 rig top</div>
+                        <div class="row2 lef mid">row2 lef mid</div>
+                        <div class="row2 cen mid">row2 cen mid</div>
+                        <div class="row2 rig mid">row2 rig mid</div>
+                        <div class="row2 lef bot">row2 lef bot</div>
+                        <div class="row2 cen bot">row2 cen bot</div>
+                        <div class="row2 rig bot">row2 rig bot</div>
+                    </div>
+
+                </section>
+            </section>
+        </div>
+
+    </body>
+</html>
