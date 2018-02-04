@@ -44,3 +44,6 @@ If you use media query then load "std-grid-mq.css" CSS too.
 </div>
 <!--/1st-->
 ```
+
+### sample page
+https://kohx.github.io/std-grid/
